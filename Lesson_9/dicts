@@ -1,0 +1,11 @@
+# task_1
+sandwich_orders_1 = ['salmon', 'pepper', 'hamon','pepper', 'cheese', 'pepper']
+finished_sandwiches_1 = []
+print(sandwich_orders_1)
+
+def remover(remove_value):
+    while remove_value in sandwich_orders_1:
+        sandwich_orders_1.remove(remove_value)
+
+remover('pepper')
+print(sandwich_orders_1)

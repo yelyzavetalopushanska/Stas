@@ -1,0 +1,43 @@
+initial_list = ["el1", "el2", "el3", "el4", "el5"]
+
+# берем срез в диапазоне
+slice1 = initial_list[1 : 3]
+print(slice1)
+
+# берем срез от 0 до 4
+slice2 = initial_list[:4]
+print(slice2)
+
+# берем срез от 2 до последнего
+slice3 = initial_list[2:]
+print(slice3)
+
+# берем срез последних 2-х элементов
+slice4 = initial_list[-2:]
+print(slice4)
+
+initial_list.append("el6")
+
+# копирование списков
+copy_list = initial_list[:]
+print(copy_list)
+
+initial_list.append("el7")
+print(copy_list)
+print(initial_list)
+
+linked_list = initial_list
+print(f'Linked list {linked_list}')
+initial_list.append("el8")
+print(f'Linked list 2 {linked_list}')
+
+# Кортежи - те же списки, но которые нельзя изменить
+my_tuple = (3, 5, 6)
+print(my_tuple)
+# my_tuple ссылается на другой обьект
+my_tuple = (4,)
+print(my_tuple)
+
+tuple_list = [(4, 3), (4,), (1, 8, 3), (2, 9, 2, 3)]
+for t_element in tuple_list:
+    print(t_element)

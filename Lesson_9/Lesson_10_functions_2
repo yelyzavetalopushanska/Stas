@@ -1,0 +1,59 @@
+# обьявление простой функции
+def name ():
+    '''Документация'''
+    print("Simple function")
+
+# обьявление простой функции с аргументом (параметром)
+def great_user (username):
+    '''Приветствие пользователя по имени'''
+    print(f"Hello, {username.title()}!")
+
+great_user("stas") # обращение к функции
+
+# функция с несколькими аргументами
+def additional (a, b):
+    print(f"a + b = {a + b}")
+
+# вызов функции с позиционными аргументами
+additional(4, 6)
+
+# вызов функции с именными аргументами
+additional(b=9, a=2)
+
+# функция, которая возвращает значение
+def get_username (name, last_name):
+    return f"{name.title()} {last_name.title}"
+
+def get_username_2 (name, last_name) :
+    full_name = f"{name} {last_name}".title()
+    return full_name
+
+# использование параметров по умолчанию
+def get_username_3 (last_name="No last name", name="Sasha") :
+    return f"{name} {last_name}".title()
+
+# вызов функции по умолчанию
+print(get_username_3())
+print(get_username_3(last_name="Koval"))
+print(get_username_3(name="Stas"))
+print(get_username_3(name="stas", last_name="koval"))
+
+# функция с необязательными аргументами
+def get_full_name (name, last_name, middle_name=""):
+    if middle_name:
+        full_name =  f"{name} {middle_name} {last_name}"
+    else:
+        full_name = f"{name} {last_name}"
+    return full_name.title()
+
+
+# вызов функции с необязательными аргументами
+print("Вызов функции с необязательными аргументами")
+print(get_full_name(name="stas", last_name="koval"))
+print(get_full_name(name="stas", middle_name="olegovich", last_name="koval"))
+
+# возвращение словаря
+def get_dict (name, last_name):
+    temp_dict = {}
+    temp_dict[name] = last_name
+    return temp_dict
