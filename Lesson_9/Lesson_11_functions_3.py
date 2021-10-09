@@ -40,4 +40,4 @@ def person (name, last, **additional_info):
     additional_info['last_name'] = last
     return additional_info
 
-#print(person('Stas', 'Koval', location = 'Kiev', age = 33))
+print(person('Stas', 'Koval', location = 'Kiev', age = 33, pets="have dog"))

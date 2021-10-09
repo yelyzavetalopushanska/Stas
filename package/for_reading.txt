@@ -1,0 +1,2 @@
+Hello, Stas!
+Today you will learn exceptions and reading files!
